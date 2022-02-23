@@ -6,6 +6,11 @@ This is a convenience function for creating HTML with Javascript.
 
 ### Install
 
+In the browser, grab one of the files from the `dist` folder in this repository.
+
+You will also need an escape function such as the one found in [haka.](https://github.com/eldoy/haka)
+
+With NodeJS install it from NPM, escape function is included:
 ```
 npm i htmlview
 ```
@@ -13,6 +18,7 @@ npm i htmlview
 ### Usage
 
 ```js
+// For usage with NodeJS only
 const h = require('htmlview')
 
 // HTML string, just like normal template string
