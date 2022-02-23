@@ -1,6 +1,6 @@
 window.h = function h(strings, ...keys) {
   let s = ''
-  for(let i = 0; i < strings.length; i++) {
+  for (let i = 0; i < strings.length; i++) {
     let text = strings[i]
     let val = keys[i] || ''
 
