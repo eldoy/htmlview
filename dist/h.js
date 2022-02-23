@@ -13,7 +13,7 @@ window.h = function h(strings, ...keys) {
     } else if (val.constructor == String) {
       if (text.slice(-1) == '$') {
         text = text.slice(0, -1)
-      } else {
+      } else if (typeof esc == 'function') {
         val = esc(String(val))
       }
     }
