@@ -1,0 +1,1 @@
+window.h=function(i,...o){let r="";for(let n=0;n<i.length;n++){let e=i[n],t=o[n];"function"==typeof t?t=t():Array.isArray(t)?t=t.join(""):"string"==typeof t&&("$"==e.slice(-1)?e=e.slice(0,-1):"function"==typeof esc&&(t=esc(t))),r+=""+e+(t||"")}return r};

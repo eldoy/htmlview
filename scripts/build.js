@@ -11,7 +11,7 @@ if (!fs.existsSync('./dist')) {
   fs.mkdirSync('./dist')
 }
 
-fs.writeFileSync('./dist/h.js', code.join('\n'))
+fs.writeFileSync('./dist/htmlview.js', code.join('\n'))
 
 const result = uglify.minify(code.join('\n'))
-fs.writeFileSync('./dist/h-min.js', result.code)
+fs.writeFileSync('./dist/htmlview-min.js', result.code)
