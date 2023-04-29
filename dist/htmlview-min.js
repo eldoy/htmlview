@@ -1,1 +1,1 @@
-window.h=function(i,...o){let r="";for(let n=0;n<i.length;n++){let e=i[n],t=o[n];"function"==typeof t?t=t():Array.isArray(t)?t=t.join(""):"string"==typeof t&&("$"==e.slice(-1)?e=e.slice(0,-1):"function"==typeof esc&&(t=esc(t))),r+=""+e+(t||"")}return r};
+window.h=function(e,...r){var t="";for(let n=0;n<e.length;n++){var i=e[n],o=r[n];"function"==typeof o?o=o():Array.isArray(o)?o=o.join(""):"string"==typeof o&&("$"==i.slice(-1)?i=i.slice(0,-1):"function"==typeof esc&&(o=esc(o))),t+=""+i+(o||"")}return t};
