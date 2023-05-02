@@ -1,5 +1,3 @@
-const { esc } = require('haka')
-
 module.exports = function h(strings, ...keys) {
   var s = ''
   for (let i = 0; i < strings.length; i++) {
@@ -10,12 +8,6 @@ module.exports = function h(strings, ...keys) {
       val = val()
     } else if (Array.isArray(val)) {
       val = val.join('')
-    } else if (typeof val == 'string') {
-      if (text.slice(-1) == '$') {
-        text = text.slice(0, -1)
-      } else if (typeof esc == 'function') {
-        val = esc(val)
-      }
     }
     s += `${text}${val || ''}`
   }

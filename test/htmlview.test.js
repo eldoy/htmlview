@@ -38,13 +38,3 @@ it('should return empty for undefined functions', async () => {
   }}`
   expect(result).toBe('hello ')
 })
-
-it('should escape HTML in vars', async () => {
-  const result = h`<div>${'<p>hello</p>'}</div>`
-  expect(result).toBe('<div>&lt;p&gt;hello&lt;/p&gt;</div>')
-})
-
-it('should not escape raw vars', async () => {
-  const result = h`<div>$${'<p>hello</p>'}</div>`
-  expect(result).toBe('<div><p>hello</p></div>')
-})

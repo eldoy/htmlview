@@ -39,14 +39,6 @@ const html = h`<div>hello ${[ '1', '2', '3'].join(',')}</div>`
 const html = h`<div>hello ${() => 'bye'}</div>`
 // <div>hello bye</div>
 
-// Escapes all string variables by default
-const html = h`<div>hello ${'<b>bye</b>'}</div>`
-// <div>hello &lt;b&gt;hello&lt;/b&gt;</div>
-
-// Raw string, no escaping
-const html = h`<div>hello $${'<b>bye</b>'}</div>`
-// <div>hello <b>bye</b></div>
-
 // Returns empty string by default, not 'undefined'
 const html = h`<div>hello${() => {
   if (project.done) return '<b>bye</b>'
