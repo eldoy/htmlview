@@ -1,4 +1,4 @@
-const h = require('../lib/h.js')
+const h = require('../index.js')
 
 it('should return the string', async () => {
   const result = h`hello`
@@ -26,12 +26,16 @@ it('should join arrays', async () => {
 })
 
 it('should call functions', async () => {
-  const result = h`hello ${function() { return 'bye'}}`
+  const result = h`hello ${function () {
+    return 'bye'
+  }}`
   expect(result).toBe('hello bye')
 })
 
 it('should return empty for undefined functions', async () => {
-  const result = h`hello ${function() { if (false) return }}`
+  const result = h`hello ${function () {
+    if (false) return
+  }}`
   expect(result).toBe('hello ')
 })
 
