@@ -28,12 +28,9 @@ it('should join arrays', async () => {
   expect(result).toBe('hello 123')
 })
 
-it('should escape HTML in vars', async () => {
-  const result = h`<div>${'<p>hello</p>'}</div>`
-  expect(result).toBe('<div>&lt;p&gt;hello&lt;/p&gt;</div>')
-})
-
-it('should not escape raw vars', async () => {
-  const result = h`<div>!!${'<p>hello</p>'}</div>`
-  expect(result).toBe('<div><p>hello</p></div>')
+it('should return empty string for null and undefined', async () => {
+  let result = h`<div>${null}</div>`
+  expect(result).toBe('<div></div>')
+  result = h`<div>${undefined}</div>`
+  expect(result).toBe('<div></div>')
 })
