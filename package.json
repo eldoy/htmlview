@@ -1,6 +1,6 @@
 {
   "name": "htmlview",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "HTML view template string function",
   "main": "index.js",
   "scripts": {
