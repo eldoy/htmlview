@@ -8,6 +8,8 @@ This is a convenience function for creating HTML with Javascript.
 
 In the browser, grab one of the files from the `dist` folder in this repository.
 
+You will also need an escape function such as the one found in [haka.](https://github.com/eldoy/haka#escape-string)
+
 ```
 npm i htmlview
 ```
@@ -37,6 +39,14 @@ const html = h`<div>hello ${[ '1', '2', '3'].join(',')}</div>`
 // Automatically calls functions
 const html = h`<div>hello ${() => 'bye'}</div>`
 // <div>hello bye</div>
+
+// Escapes all string variables by default
+const html = h`<div>hello ${'<b>bye</b>'}</div>`
+// <div>hello &lt;b&gt;hello&lt;/b&gt;</div>
+
+// Raw string, no escaping
+const html = h`<div>hello $${'<b>bye</b>'}</div>`
+// <div>hello <b>bye</b></div>
 
 // Returns empty string by default, not 'undefined'
 const html = h`<div>hello${() => {

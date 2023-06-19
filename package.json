@@ -16,5 +16,8 @@
   "devDependencies": {
     "jest": "^29.5.0",
     "uglify-js": "^3.17.4"
+  },
+  "dependencies": {
+    "haka": "^0.13.0"
   }
 }
