@@ -45,7 +45,7 @@ const html = h`<div>hello ${'<b>bye</b>'}</div>`
 // <div>hello &lt;b&gt;hello&lt;/b&gt;</div>
 
 // Raw string, no escaping
-const html = h`<div>hello $${'<b>bye</b>'}</div>`
+const html = h`<div>hello !!${'<b>bye</b>'}</div>`
 // <div>hello <b>bye</b></div>
 
 // Returns empty string by default, not 'undefined'
